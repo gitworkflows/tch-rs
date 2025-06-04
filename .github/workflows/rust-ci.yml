@@ -23,7 +23,6 @@ jobs:
           args: --features download-libtorch
       - name: Mark as soft-fail for nightly (optional)
         if: ${{ matrix.rust == 'nightly' }}
-        run: exit 0
         continue-on-error: true
 
   test:
